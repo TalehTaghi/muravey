@@ -1,0 +1,315 @@
+<!-- <!DOCTYPE html> -->
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="shortcut icon" href="asset/img/logo.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/0ad63258ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Корзина</title>
+</head>
+
+<body>
+
+    <header class="header-top">
+        <div class="container px-xl-4 d-lg-flex d-xl-block justify-content-lg-center">
+            <div class="row">
+                <div class="col-12 col-lg-2 d-flex justify-content-center mb-4 mb-lg-0">
+                    <a href="index.htm"> <img src="asset/img/logo.png" class="logo" alt="logo" title="logo"
+                            width="180px" /> </a>
+                </div>
+                <div
+                    class="col-lg-8 d-none d-lg-flex align-items-center justify-content-lg-end justify-content-xl-center pe-lg-1 px-xl-2">
+                    <nav class="header-nav">
+                        <ul class="m-0 px-4 rounded bg-white text-center d-flex flex-column d-sm-block">
+                            <li class="px-3 py-1"> <a href="index.htm">Главная</a> </li>
+                            <li class="px-3 py-1"> <a href="#">Категории</a> </li>
+                            <li class="px-3 py-1"> <a href="about.html">О нас</a> </li>
+                            <li class="px-3 py-1"> <a href="contact.html">Контакты</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div
+                    class="col-lg-2 d-none d-lg-flex align-items-lg-center justify-content-lg-evenly justify-content-xl-between justify-content-xxl-around p-0">
+                    <div class="userIcon d-none d-xl-flex align-items-center" title="Мой профиль">
+                        <a href="profile.htm" class="allIcons avatar me-xl-1"> <i class="fas fa-user"></i> </a>
+                        <a href="profile.htm" class="m-0">Taleh</a>
+                    </div>
+                    <a href="checkout.htm" class="allIcons icon d-none d-lg-block" title="Корзина">
+                        <i class="fas fa-shopping-cart"></i>
+                        <sup>0</sup>
+                    </a>
+                    <a href="#" class="allIcons icon d-none d-lg-block" title="Избранное">
+                        <i class="fas fa-heart"></i>
+                        <sup>0</sup>
+                    </a>
+                    <a href="profile.htm" class="allIcons icon d-none d-lg-block d-xl-none" title="Мой профиль"> <i
+                            class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-lg-none">
+                    <form action="#" method="POST"
+                        class="header-form d-lg-none d-inline-flex justify-content-lg-between">
+                        <input type="search" name="search" placeholder="Введите запрос..." />
+                        <button type="button"> <i class="fas fa-search"></i> <span
+                                class="d-none d-sm-inline">Поиск</span> </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mb-4" id="checkout-header-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="checkout-header" class="border-cump general-header-text-div">
+                        <div class="border-cump general-header-text">
+                            <h1>Корзина</h1>
+                            <div>
+                                <ul>
+                                    <li><a href="index.htm">Главная ></a></li>
+                                    <li><a class="active" href="#">Корзина</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="checkout-section">
+        <div class="container mt-5 p-4 bg-white">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Ваш заказ</h3>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-2 pe-0">
+                    <hr />
+                </div>
+                <div class="col-10 ps-0">
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <table cellspacing="0" id="checkout-products-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th><span class="d-none d-md-block">Продукт</span><i
+                                        class="fas fa-tshirt d-md-none"></i></th>
+                                <th><span class="d-none d-md-block">Цена</span><i
+                                        class="fas fa-dollar-sign d-md-none"></i></th>
+                                <th><span class="d-none d-md-block">Количество</span><i
+                                        class="fas fa-tally d-md-none"></i></th>
+                                <th><span class="d-none d-md-block">Всего</span><i
+                                        class="fas fa-money-bill d-md-none"></i></th>
+                                <th><span class="d-none d-md-block">Действие</span><i class="fas fa-eye d-md-none"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="checkout-products-table-body">
+                            <tr>
+                                <td></td>
+                                <td>Майка</td>
+                                <td><span class="checkout_product_price">1000</span> руб.</td>
+                                <td class="checkout_product_quantity">2</td>
+                                <td><span class="checkout_product_total_price"></span> руб.</td>
+                                <td
+                                    class="show_delete d-flex flex-column flex-sm-row align-items-center justify-content-evenly">
+                                    <a title="Посмотреть продукт"><i class="fas fa-eye"></i></a>
+                                    <a title="Удалить продукт"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Тапочки</td>
+                                <td><span class="checkout_product_price">750</span> руб.</td>
+                                <td class="checkout_product_quantity">1</td>
+                                <td><span class="checkout_product_total_price"></span> руб.</td>
+                                <td
+                                    class="show_delete d-flex flex-column flex-sm-row align-items-center justify-content-evenly">
+                                    <a title="Посмотреть продукт"><i class="fas fa-eye"></i></a>
+                                    <a title="Удалить продукт"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Шапка</td>
+                                <td><span class="checkout_product_price">1250</span> руб.</td>
+                                <td class="checkout_product_quantity">3</td>
+                                <td><span class="checkout_product_total_price"></span> руб.</td>
+                                <td
+                                    class="show_delete d-flex flex-column flex-sm-row align-items-center justify-content-evenly">
+                                    <a title="Посмотреть продукт"><i class="fas fa-eye"></i></a>
+                                    <a title="Удалить продукт"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-between">
+                <div class="col-12 col-lg-5 d-flex flex-wrap align-content-start">
+
+                    <div class="col-12">
+                        <h3>Выберите адрес доставки</h3>
+                    </div>
+
+                    <div class="col-12 d-flex">
+                        <div class="col-2 pe-0">
+                            <hr />
+                        </div>
+                        <div class="col-10 ps-0">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-5">
+                        <select name="address" id="checkoutAddress" class="rounded p-3">
+                            <option value="Выберите адрес" selected="selected" hidden="hidden" disabled="disabled">
+                                Выберите адрес</option>
+                            <option value="Домашний">Домашний</option>
+                            <option value="Рабочий">Рабочий</option>
+                            <option value="Офисный">Офисный</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <h3>Выберите способ оплаты</h3>
+                    </div>
+
+                    <div class="col-12 d-flex">
+                        <div class="col-2 pe-0">
+                            <hr />
+                        </div>
+                        <div class="col-10 ps-0">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-column flex-sm-row justify-content-between mb-5">
+                        <article class="address onAddress col-12 col-sm-5 mb-3 mb-sm-0 p-3">
+                            <h6 class="mb-2">Картой</h6>
+                            <p class="m-0">1234-5678-9012-3456</p>
+                        </article>
+                        <article class="address col-12 col-sm-5 p-3">
+                            <h6 class="mb-2">Наличными</h6>
+                            <p class="m-0">Деньги передаются курьеру во время доставки</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12">
+                        <h3>Приблизительная дата доставки</h3>
+                    </div>
+
+                    <div class="col-12 d-flex">
+                        <div class="col-2 pe-0">
+                            <hr />
+                        </div>
+                        <div class="col-10 ps-0">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-5">
+                        <p>16 Августа, 5:05</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex flex-wrap align-content-start">
+                    <div class="col-12">
+                        <h3>Сумма</h3>
+                    </div>
+
+                    <div class="col-12 d-flex">
+                        <div class="col-2 pe-0">
+                            <hr />
+                        </div>
+                        <div class="col-10 ps-0">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <table id="checkout-price-table">
+                            <tbody id="checkout-price-table-body">
+                                <tr>
+                                    <td>Общая сумма</td>
+                                    <td><span id="checkout_sub_total"></span> руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>Цена за доставку</td>
+                                    <td><span>10.00</span> руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>Скидка</td>
+                                    <td><span>0.00</span> руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>ИТОГ</td>
+                                    <td><span id="checkout_total"></span> руб.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="py-3">Оформить покупку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="sticky-bottom m-auto px-4 py-2 d-lg-none">
+        <nav>
+            <ul class="d-flex justify-content-evenly p-0 m-0">
+                <li class="d-flex flex-column align-items-center"> <a href="#" class="allIcons icon stickyIcons"><i
+                            class="fas fa-bars"></i></a> <a href="#" class="sticky-span"><span>Меню</span></a> </li>
+                <li class="d-flex flex-column align-items-center"> <a href="#" class="allIcons icon stickyIcons"><i
+                            class="fas fa-cubes"></i></a> <a href="#" class="sticky-span"><span>Категории</span></a>
+                </li>
+                <li class="d-flex flex-column align-items-center"> <a href="checkout.htm"
+                        class="allIcons icon stickyIcons"><i class="fas fa-shopping-cart"></i> <sup>0</sup></a> <a
+                        href="checkout.htm" class="sticky-span"><span>Корзина</span></a>
+                </li>
+                <li class="d-flex flex-column align-items-center"> <a href="#" class="allIcons icon stickyIcons"><i
+                            class="fas fa-heart"></i> <sup>0</sup></a> <a href="#"
+                        class="sticky-span"><span>Избранное</span></a> </li>
+                <li class="d-flex flex-column align-items-center"> <a href="profile.htm"
+                        class="allIcons icon stickyIcons"><i class="fas fa-user"></i></a> <a href="profile.htm"
+                        class="sticky-span"><span>Пользователь</span></a> </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="asset/js/script.js"></script>
+    <script src="asset/js/checkout.js"></script>
+</body>
+
+</html>
